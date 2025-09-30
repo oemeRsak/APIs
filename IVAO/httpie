@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "format": "httpie",
+    "version": "1.0.0",
+    "contentType": "collection",
+    "schema": "https://schema.httpie.io/1.0.0.json",
+    "docs": "https://httpie.io/r/help/export-from-httpie",
+    "source": "HTTPie Desktop 2025.2.0"
+  },
+  "entry": {
+    "name": "Notion",
+    "icon": {
+      "name": "default",
+      "color": "gray"
+    },
+    "auth": {
+      "type": "bearer",
+      "target": "headers",
+      "credentials": {
+        "username": "",
+        "password": "{{NOTION_TOKEN}}"
+      }
+    },
+    "requests": [
+      {
+        "name": "",
+        "url": "https://api.notion.com/v1/users",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "Notion-Version",
+            "value": "2022-06-28",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "",
+        "url": "https://api.notion.com/v1/databases/{{NOTION_TEST_DATABASE_ID}}/",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "accept",
+            "value": "application/json",
+            "enabled": false
+          },
+          {
+            "name": "Notion-Version",
+            "value": "2022-06-28",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "none",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      },
+      {
+        "name": "",
+        "url": "https://api.notion.com/v1/databases/{{NOTION_TEST_DATABASE_ID}}/query",
+        "method": "POST",
+        "headers": [
+          {
+            "name": "accept",
+            "value": "application/json",
+            "enabled": true
+          },
+          {
+            "name": "Notion-Version",
+            "value": "2022-06-28",
+            "enabled": true
+          },
+          {
+            "name": "content-type",
+            "value": "application/json",
+            "enabled": true
+          }
+        ],
+        "queryParams": [],
+        "pathParams": [],
+        "auth": {
+          "type": "inherited"
+        },
+        "body": {
+          "type": "text",
+          "file": {
+            "name": ""
+          },
+          "text": {
+            "value": "{\n  \"filter\": {\n    \"property\": \"check\",\n    \"status\": {\n      \"equals\": \"Not started\"\n    }\n  }\n}",
+            "format": "application/json"
+          },
+          "form": {
+            "isMultipart": false,
+            "fields": []
+          },
+          "graphql": {
+            "query": "",
+            "variables": ""
+          }
+        }
+      }
+    ]
+  }
+}
