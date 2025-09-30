@@ -42,7 +42,7 @@ Returns a JSON object with the following properties:
 
 **Request:**
 
-```http
+```
 METHOD /endpoint?param1=value&param2=value
 ```
 
